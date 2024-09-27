@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CGPA Calculator app</title>
+    <!-- Linking Home CSS -->
+    <link href="index.css" rel="stylesheet"/>
+    
+    <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+
+
+  <body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          CGPA app by Group 5 Even
+        </a>
+      </nav>
+      <nav class="navbar navbar-inverse" style="background-color: blueviolet;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="info.html">How It Works</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    
+      <div class="container">
+        <div class="jumbotron">
+          <h4>How It Works: CGPA Calculation on Our Platform</h4>
+          <p>Our CGPA Calculator is designed to help you compute your Cumulative Grade Point Average quickly and accurately based on the input you provide. Here’s a breakdown of how the process works on our website:          </p>
+
+        <div class="well well-lg">
+          <h5>Input Your Details:</h5>
+          <ul>
+            <li>First, select the academic level and semester.</li>
+              <li>For each course, input:</li>
+              <ul>
+                <li>Course Code (e.g., CSC 101)</li>
+                <li>Grade received (A, B, C, etc.)</li>
+                <li>Units for the course (1 to 5)</li>
+              </ul>
+              <li>You can add multiple courses by clicking the “Add Course” button.</li>
+          </ul>
+        </div>
+
+        <div class="well well-lg">
+          <h5>Click on “SUBMIT” to Calculate</h5>
+          <ul>
+            <li>Once you've entered all the courses for the semester, click on the **SUBMIT** button at the bottom.</li>
+            <li>The system will instantly compute your current CGPA and display the result in the upper section of the webpage.</li>
+
+          </ul>
+   
+        </div>
+
+        <div class="well well-lg">
+
+          <h5>How CGPA Is Calculated:</h5>
+          <ul>
+            <li>Each course has a specific unit (ranging from 1-5).</li>
+            <li>Each grade corresponds to a certain number of points:</li>
+            <ol>
+              <li>A = 5 points</li>
+              <li>B = 4 points</li>
+              <li>C = 3 points</li>
+              <li>D = 2 points</li>
+              <li>E = 1 point</li>
+              <li>F = 0 points</li>
+            </ol>
+            <li>The points for each course are calculated by multiplying the grade points by the course units. For example:</li>
+            <ol>
+              <li> A 3-unit course where you scored an A would be <strong>3 units × 5 points = 15 points</strong>.</li>
+              <li>A 5-unit course where you scored a B would be <strong>5 units × 4 points = 20 points</strong>.</li>
+            </ol>
+          </ul>
+             
+
+        </div>
+
+        <div class="well well-lg">
+          <h5>Calculating GPA (Grade Point Average) for the Semester:</h5>
+          <ul>
+            <li>Once you've added all your courses and their grades, the system will sum up the total credit points for each course. This total is called the<strong>Total Credit Points (TCP)</strong> </li>
+            <li>The system also adds up the total course units you took during the semester, called the <strong> Load Units (TLU)</strong>.</li>
+            <li>Get the <strong>GPA</strong> the system divides the <strong>Total Credit Points (TCP)</strong> by the <strong>Load Units (TLU)</strong>.</li>
+
+          </ul>
+   
+          For example:
+          <lu>
+            <li> If your total credit points for the semester are 100 and the total units are 22, your GPA will be:</li>
+
+          </lu>
+                  
+            GPA = {100}/{22} = 4.54
+        
+
+        </div>
+
+        <div class="well well-lg">
+          <h5>Calculating CGPA (Cumulative Grade Point Average):</h5>
+          <ul>
+            <li>The CGPA is the average of all the semester GPAs. To calculate the CGPA, the system takes the total credit points and total load units from all semesters and divides them.</li>
+            <li>For instance:
+              <ol>
+                <li>If in the first semester, your Total Credit Points (TCP) were 100, and in the second semester, your TCP was 105, the cumulative TCP would be:</li>
+                <li>TCP(total)
+                   =100+105=205</li>
+              </ol>
+            </li>
+            <li>If your Total Load Units (TLU) for the first semester were 22 and for the second semester 23, the cumulative TLU would be:</li>
+            <li>TLU (total)​=22+23=45</li>
+            <li>Your CGPA would then be:
+              CGPA = 205/45 = 4.55</li>
+
+          </ul>
+
+          
+
+        </div>
+
+        <div class="well well-lg">
+
+          <h5>Final Output:</h5>
+          <ul>
+            <li>After computation, your GPA for the current semester and your overall CGPA are displayed at the top of the page for easy access and review.</li>
+            <li>ou can always go back and update course details if necessary by removing courses or modifying grades.</li>
+         </ul>
+   
+         By following these steps, you’ll get an accurate measure of your academic performance. Understanding how your CGPA is calculated can help you plan better and aim for your academic goals.
+
+        </div>
+        </div>
+      </div>
+    
+
+  
+    <div class="footer">
+
+        <p>2024 © Department of Computer Sci, 2023/2024 set @ EKSU</p>
+        
+    </div>
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

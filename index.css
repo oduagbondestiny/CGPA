@@ -1,0 +1,75 @@
+.level
+{
+
+    width: 150px;
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: blueviolet;
+    margin-bottom: 10px;
+
+}
+.main-heading
+{
+    color: rgb(176, 85, 212);
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.course-table
+{
+    margin-top: 10px;
+}
+.grades, .units
+{
+    width: 100px;
+    height: 30px;
+    border-color:blueviolet ;
+    margin-left: 30px;
+
+
+}
+.course-code
+{
+
+    border-top: none;
+    border-left:none ;
+    border-right: none;
+    border-bottom-color: blueviolet;
+    height: 30px;
+}
+
+.course-table{
+
+    margin-bottom: 10px;
+}
+.heading
+{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+
+}
+.show-case-date
+{
+    align-items: center;
+    text-align: center;
+}
+.footer
+{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: blueviolet;
+        color: white;
+        text-align: center;
+      
+}
+.show-btn
+{
+    background-color: rgb(176, 85, 212);
+    color: white;
+}
+

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CGPA Calculator app</title>
+    <!-- Linking Home CSS -->
+    <link href="index.css" rel="stylesheet"/>
+    
+    <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+
+
+  <body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h6 class="navbar-brand main-heading" href="#">
+          <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          CGPA app by Group 5 Even
+        </h6>
+      </nav>
+      <nav class="navbar navbar-inverse" style="background-color: blueviolet;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="info.html">How It Works</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="heading">
+
+        <h4 class="text-muted heading-text">Saved Levels
+        <a href="#demo"class="glyphicon glyphicon-chevron-down nav-icon-left" data-toggle="collapse"></a>
+        </h4>
+
+        <div id="demo" class="collapse">
+         
+            <div class="jumbotron">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="showcaseCGPA">
+                      <thead>
+                        <tr>
+                          <th>Level</th>
+                          <th>Semester</th>
+                          <th>GPA</th>
+                          <th>Remove</th>
+                        </tr>
+                      </thead>
+                      
+                        <tbody>
+                        </tbody>
+                   
+                      
+                    </table>
+    
+                    <ul class="pager">
+                        <li style="float: center;" id="totalCGPAResult"></li>
+                        <li class="next" style="float: right; padding-right: 10px;"> <button  class="btn show-btn" onclick="calculateTotalCGPA()">Calculate Total </button> </li>
+                    </ul>
+                  </div>
+            
+              </div>
+    
+      
+        </div>
+
+    </div>
+    <hr>
+    <div class="container">
+
+        <div class="form">
+
+            <h5 class="text-danger"> Fill Form To Calculate Total CGPA </h5>
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="level">Level:</label>
+                  
+                  
+                    <select name="Level" id="level" class="level">
+                        <option value="100Level">100 Level</option>
+                        <option value="200Level">200 Level</option>
+                        <option value="300Level">300 Level</option>
+                        <option value="400level">400 Level</option>
+                        <option value="500level">500 Level</option>
+                      </select>
+                  
+                  <label style="margin-left: 20px;"for="semester">Semester:</label>
+                    <select name="semester" id="semester" class="level">
+                        <option value="first">First</option>
+                        <option value="second">Second</option>
+                      </select>
+                  
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <table class="course-table">
+                            <tr>
+                              <th class="text-muted">Course Code:</th>
+                              <th class="text-muted">Grades:</th>
+                              <th class="text-muted">Units:</th>
+                            </tr>
+                            <tr>
+                              <td><input type="text" id="courseCode" class="course-code" placeholder="Course Code" ></td>
+                              <td>
+                                <select name="grades" id="grades" class="grades">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="E">E</option>
+                                    <option value="F">F</option>
+                                </select>
+                              </td>
+                              <td>
+                                <select name="units" id="units" class="units">
+                                    <option value="5">5</option>
+                                    <option value="4">4</option>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                </select>
+                              </td>
+                            </tr>
+                          </table>
+                    </div>
+                  </div>
+            
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="button" class="btn btn-primary" id="addCourse">Add Course  <span class="glyphicon glyphicon-plus-sign"></span></button>
+              <button type="button" onclick="clearCourse()" class="btn btn-danger">Clear  <span class="glyphicon glyphicon-remove-sign"></span></button>
+            </div>
+      </div>
+    </form>
+
+
+<hr>
+      <div class="data-show-case">
+
+        <div class="jumbotron">
+            <div class="table-responsive">
+                <table class="table table-striped" id="showcase">
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Grades</th>
+                      <th>Unit</th>
+                      <th>Remove</th>
+                    </tr>
+                  </thead>
+                  
+                    <tbody>
+                    </tbody>
+               
+                  
+                </table>
+
+                <ul class="pager">
+                    <li class="previous" style="float: left; padding-left: 10px;"><button class="btn show-btn" onclick="saveGPA()">Save</button></li>
+                    <li style="float: center;" id="gpaResult"></li>
+                    <li class="next" style="float: right; padding-right: 10px;"> <button  class="btn show-btn" onclick="calculateGPA()">Calculate</button> </li>
+                </ul>
+              </div>
+        
+          </div>
+
+        
+      </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="footer">
+
+        <p>2024 © Department of Computer Sci, 2023/2024 set @ EKSU</p>
+        
+    </div>
+
+
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+     <!-- Linking JavaScript -->
+     <script src="index.js"></script>
+
+
+  </body>
+</html>
