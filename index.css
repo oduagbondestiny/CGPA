@@ -1,6 +1,5 @@
 .level
 {
-
     width: 150px;
     height: 40px;
     border-top: none;
@@ -8,7 +7,6 @@
     border-right: none;
     border-bottom-color: blueviolet;
     margin-bottom: 10px;
-
 }
 .main-heading
 {
@@ -16,20 +14,22 @@
     padding-top: 0;
     margin-top: 0;
 }
-
+.lebal-size
+{
+    padding-left: 20px;
+}
 .course-table
 {
     margin-top: 10px;
 }
 .grades, .units
 {
-    width: 100px;
+    width: 60px;
     height: 30px;
     border-color:blueviolet ;
     margin-left: 30px;
-
-
 }
+
 .course-code
 {
 
